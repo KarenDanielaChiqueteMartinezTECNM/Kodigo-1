@@ -1,0 +1,41 @@
+# Configuración de análisis de código para Flutter
+# Asegura código limpio y consistente
+
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+
+linter:
+  rules:
+    # Reglas de estilo
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - prefer_final_fields
+    - prefer_final_locals
+    - prefer_single_quotes
+    
+    # Reglas de documentación
+    - public_member_api_docs
+    - lines_longer_than_80_chars
+    
+    # Reglas de rendimiento
+    - avoid_function_literals_in_foreach_calls
+    - prefer_collection_literals
+    - prefer_spread_collections
+    
+    # Reglas de seguridad
+    - avoid_print
+    - avoid_web_libraries_in_flutter
+    
+    # Reglas de mantenibilidad
+    - avoid_empty_else
+    - avoid_returning_null_for_void
+    - prefer_is_empty
+    - prefer_is_not_empty
